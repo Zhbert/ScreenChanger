@@ -10,6 +10,7 @@ type
   TForm1 = class(TForm)
     Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
@@ -28,6 +29,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
   Form1.Label1.Caption := Form1.Label1.Caption + ' ' + IntToStr(Screen.Height);
   Form1.Label2.Caption := Form1.Label2.Caption + ' ' + IntToStr(Screen.Width);
+  Form1.Label3.Caption := Form1.Label3.Caption + ' ' + IntToStr(Screen.MonitorCount);
 end;
 
 end.

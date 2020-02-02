@@ -2159,17 +2159,16 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Label3: TLabel
-    Left = 8
-    Top = 1
-    Width = 143
-    Height = 17
-    Caption = #1050#1086#1083'-'#1074#1086' '#1084#1086#1085#1080#1090#1086#1088#1086#1074':'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = 17
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 149
+    Width = 290
+    Height = 19
+    Panels = <
+      item
+        Width = 50
+      end>
+    ExplicitLeft = -8
+    ExplicitTop = 117
   end
 end

@@ -5,7 +5,7 @@ object Form1: TForm1
   BorderStyle = bsSingle
   BorderWidth = 2
   Caption = 'Screen Changer by Zhbert'
-  ClientHeight = 168
+  ClientHeight = 179
   ClientWidth = 290
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -2133,35 +2133,9 @@ object Form1: TForm1
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 8
-    Top = 88
-    Width = 121
-    Height = 17
-    Caption = #1064#1080#1088#1080#1085#1072' '#1101#1082#1088#1072#1085#1072': '
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = 17
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
-  object Label2: TLabel
-    Left = 8
-    Top = 111
-    Width = 115
-    Height = 17
-    Caption = #1042#1099#1089#1086#1090#1072' '#1101#1082#1088#1072#1085#1072': '
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = 17
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 149
+    Top = 160
     Width = 290
     Height = 19
     Panels = <
@@ -2173,21 +2147,32 @@ object Form1: TForm1
         Text = #1052#1072#1082#1089#1080#1084#1091#1084': 3'
         Width = 100
       end>
-    ExplicitLeft = -8
-    ExplicitTop = 117
+    ExplicitTop = 149
   end
   object GroupBox1: TGroupBox
     Left = 8
     Top = 0
-    Width = 274
-    Height = 74
+    Width = 273
+    Height = 97
     Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1084#1086#1085#1080#1090#1086#1088#1086#1074
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     object StringGrid1: TStringGrid
       Left = 3
-      Top = 15
-      Width = 270
-      Height = 120
+      Top = 23
+      Width = 268
+      Height = 63
+      BorderStyle = bsNone
+      ColCount = 4
+      DefaultColWidth = 66
+      DefaultRowHeight = 20
+      RowCount = 3
+      ScrollBars = ssNone
       TabOrder = 0
     end
   end

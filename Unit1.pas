@@ -27,9 +27,13 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  Form1.Label1.Caption := Form1.Label1.Caption + ' ' + IntToStr(Screen.Height);
-  Form1.Label2.Caption := Form1.Label2.Caption + ' ' + IntToStr(Screen.Width);
-  Form1.Label3.Caption := Form1.Label3.Caption + ' ' + IntToStr(Screen.MonitorCount);
+  Try
+    Form1.Label1.Caption := Form1.Label1.Caption + ' ' + IntToStr(Screen.Height);
+    Form1.Label2.Caption := Form1.Label2.Caption + ' ' + IntToStr(Screen.Width);
+    Form1.Label3.Caption := Form1.Label3.Caption + ' ' + IntToStr(Screen.MonitorCount);
+  except
+    ShowMessage('Ќевозможно определить кол-во мониторов!');
+  End;
 end;
 
 end.

@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.Grids;
 
 type
   TForm1 = class(TForm)
@@ -12,6 +12,7 @@ type
     Label2: TLabel;
     StatusBar1: TStatusBar;
     GroupBox1: TGroupBox;
+    StringGrid1: TStringGrid;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

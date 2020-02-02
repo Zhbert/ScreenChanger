@@ -2183,5 +2183,12 @@ object Form1: TForm1
     Height = 74
     Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1084#1086#1085#1080#1090#1086#1088#1086#1074
     TabOrder = 1
+    object StringGrid1: TStringGrid
+      Left = 3
+      Top = 15
+      Width = 270
+      Height = 120
+      TabOrder = 0
+    end
   end
 end

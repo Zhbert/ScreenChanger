@@ -2135,7 +2135,7 @@ object Form1: TForm1
   TextHeight = 13
   object Label1: TLabel
     Left = 8
-    Top = 24
+    Top = 88
     Width = 121
     Height = 17
     Caption = #1064#1080#1088#1080#1085#1072' '#1101#1082#1088#1072#1085#1072': '
@@ -2148,7 +2148,7 @@ object Form1: TForm1
   end
   object Label2: TLabel
     Left = 8
-    Top = 47
+    Top = 111
     Width = 115
     Height = 17
     Caption = #1042#1099#1089#1086#1090#1072' '#1101#1082#1088#1072#1085#1072': '
@@ -2166,9 +2166,22 @@ object Form1: TForm1
     Height = 19
     Panels = <
       item
-        Width = 50
+        Width = 200
+      end
+      item
+        Alignment = taCenter
+        Text = #1052#1072#1082#1089#1080#1084#1091#1084': 3'
+        Width = 100
       end>
     ExplicitLeft = -8
     ExplicitTop = 117
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 0
+    Width = 274
+    Height = 74
+    Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1084#1086#1085#1080#1090#1086#1088#1086#1074
+    TabOrder = 1
   end
 end

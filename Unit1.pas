@@ -11,6 +11,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     StatusBar1: TStatusBar;
+    GroupBox1: TGroupBox;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

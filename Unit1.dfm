@@ -2147,13 +2147,12 @@ object Form1: TForm1
         Text = #1052#1072#1082#1089#1080#1084#1091#1084': 3'
         Width = 100
       end>
-    ExplicitTop = 149
   end
   object GroupBox1: TGroupBox
     Left = 8
     Top = 0
     Width = 273
-    Height = 97
+    Height = 89
     Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1084#1086#1085#1080#1090#1086#1088#1086#1074
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

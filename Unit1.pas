@@ -25,6 +25,7 @@ var
   Form1: TForm1;
   i: integer;      //counter
   y: integer;      //counter
+  foo: TPoint;
   
 implementation
 
@@ -32,7 +33,8 @@ implementation
 
 procedure TForm1.cursorSet;
 begin
-  showMessage('Заработало!');
+  GetCursorPos(foo);
+  showMessage(IntToStr(foo.X) + ' ' + IntToStr(foo.Y));
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);

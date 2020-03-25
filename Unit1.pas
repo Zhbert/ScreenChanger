@@ -44,7 +44,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   //Регистрируем горячую клавишу
-  RegisterHotKey(Handle, 0, MOD_CONTROL, $41); // для команды Ctrl+A
+  RegisterHotKey(Handle, 0, MOD_CONTROL, $20); // для команды Ctrl+A
 
   //Заполняем ячейки основных полей
   Form1.StringGrid1.Cells[0,0] := 'Разр/Мон';

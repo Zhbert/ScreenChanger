@@ -12,10 +12,13 @@ type
     GroupBox1: TGroupBox;
     StringGrid1: TStringGrid;
     procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
     { Public declarations }
+    procedure cursorSet; // Процедура установки курсора
+    procedure hot_key(var Message: TMessage); message WM_HOTKEY;
   end;
 
 var
@@ -27,8 +30,22 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm1.cursorSet;
+begin
+  showMessage('Заработало!');
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  //Убираем привязку хоткея
+  UnRegisterHotKey(Handle, 0);
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+  //Регистрируем горячую клавишу
+  RegisterHotKey(Handle, 0, MOD_CONTROL, $41); // для команды Ctrl+A
+
   //Заполняем ячейки основных полей
   Form1.StringGrid1.Cells[0,0] := 'Разр/Мон';
   Form1.StringGrid1.Cells[1,0] := '1';
@@ -70,5 +87,13 @@ begin
 end;
 
 
+
+
+
+procedure TForm1.hot_key(var Message: TMessage);
+begin
+  //Обработчик нажатия хоткея
+  cursorSet;
+end;
 
 end.

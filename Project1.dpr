@@ -9,6 +9,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.Title := 'Screen Changer';
   Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

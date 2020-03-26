@@ -24,16 +24,27 @@ type
 var
   Form1: TForm1;
   foo: TPoint;
-  WidthOfAllScreens: Integer; // Общая ширина всех экранов
-  
+
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.cursorSet;   //Процедура установки курсора
+procedure TForm1.cursorSet;   //Процедура установки курсора  (пока только для Серегиной версии)
 begin
   GetCursorPos(foo);
-  showMessage(IntToStr(foo.X) + ' ' + IntToStr(foo.Y));
+  //Определяем текущий монитор курсора
+  if (foo.X > 0) then
+    begin
+      SetCursorPos(-(1280 div 2)-1280, 1024 div 2);
+    end;
+  if (foo.X < 0) and (foo.X > -1280) then
+    begin
+      SetCursorPos(1280 div 2, 1024 div 2);
+    end;
+  if (foo.X < -1280) then
+    begin
+      SetCursorPos(-(1280 div 2), 1024 div 2);
+    end;
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -45,9 +56,6 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 var i, y: Integer;
 begin
-  //Обнуляем общую длину мониторов
-  WidthOfAllScreens := 0;
-
   //Регистрируем горячую клавишу
   RegisterHotKey(Handle, 0, MOD_CONTROL, $20); // для команды Ctrl+Пробел
 
@@ -88,13 +96,6 @@ begin
   except
     ShowMessage('Что-то пошло не так!');
   End;
-
-  //Считаем общую длину экранов по ширине
-  for i := 0 to Screen.MonitorCount-1 do
-    begin
-      WidthOfAllScreens := WidthOfAllScreens + Screen.Monitors[i].Width;
-      ShowMessage('Ширина мониторов: ' + IntToStr(WidthOfAllScreens));
-    end;
 end;
 
 

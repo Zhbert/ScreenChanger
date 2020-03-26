@@ -23,15 +23,14 @@ type
 
 var
   Form1: TForm1;
-  i: integer;      //counter
-  y: integer;      //counter
   foo: TPoint;
+  WidthOfAllScreens: Integer; // Общая ширина всех экранов
   
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.cursorSet;
+procedure TForm1.cursorSet;   //Процедура установки курсора
 begin
   GetCursorPos(foo);
   showMessage(IntToStr(foo.X) + ' ' + IntToStr(foo.Y));
@@ -44,7 +43,11 @@ begin
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
+var i, y: Integer;
 begin
+  //Обнуляем общую длину мониторов
+  WidthOfAllScreens := 0;
+
   //Регистрируем горячую клавишу
   RegisterHotKey(Handle, 0, MOD_CONTROL, $20); // для команды Ctrl+Пробел
 
@@ -85,7 +88,13 @@ begin
   except
     ShowMessage('Что-то пошло не так!');
   End;
-  
+
+  //Считаем общую длину экранов по ширине
+  for i := 0 to Screen.MonitorCount-1 do
+    begin
+      WidthOfAllScreens := WidthOfAllScreens + Screen.Monitors[i].Width;
+      ShowMessage('Ширина мониторов: ' + IntToStr(WidthOfAllScreens));
+    end;
 end;
 
 

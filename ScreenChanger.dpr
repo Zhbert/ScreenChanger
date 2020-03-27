@@ -1,4 +1,4 @@
-program Project1;
+program ScreenChanger;
 
 uses
   Vcl.Forms,
@@ -8,7 +8,8 @@ uses
 
 begin
   Application.Initialize;
-  Application.MainFormOnTaskbar := True;
+  //Отключает показ окна в панели задач
+  //Application.MainFormOnTaskbar := True;
   Application.Title := 'Screen Changer';
   Application.CreateForm(TForm1, Form1);
   Application.Run;

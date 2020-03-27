@@ -11,8 +11,13 @@ type
     StatusBar1: TStatusBar;
     GroupBox1: TGroupBox;
     StringGrid1: TStringGrid;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Button1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -101,6 +106,12 @@ end;
 
 
 
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  //Скрываем из панели задач
+  ShowWindow(Application.Handle, SW_HIDE);
+end;
 
 procedure TForm1.hot_key(var Message: TMessage);
 begin

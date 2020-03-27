@@ -5,7 +5,7 @@ object Form1: TForm1
   BorderStyle = bsSingle
   BorderWidth = 2
   Caption = 'Screen Changer'
-  ClientHeight = 179
+  ClientHeight = 169
   ClientWidth = 290
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -2132,11 +2132,51 @@ object Form1: TForm1
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 95
+    Width = 85
+    Height = 16
+    Caption = 'Ctrl + Space '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 111
+    Width = 190
+    Height = 16
+    Caption = #1055#1077#1088#1077#1082#1083#1102#1095#1072#1077#1085#1080#1077' '#1088#1072#1073#1086#1095#1080#1093' '#1089#1090#1086#1083#1086#1074
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 125
+    Width = 116
+    Height = 16
+    Caption = #1087#1086' '#1095#1072#1089#1086#1074#1086#1081' '#1089#1090#1088#1077#1083#1082#1077
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 160
+    Top = 150
     Width = 290
     Height = 19
     Panels = <
@@ -2148,6 +2188,7 @@ object Form1: TForm1
         Text = #1052#1072#1082#1089#1080#1084#1091#1084': 3'
         Width = 100
       end>
+    ExplicitTop = 160
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -2175,5 +2216,19 @@ object Form1: TForm1
       ScrollBars = ssNone
       TabOrder = 0
     end
+  end
+  object Button1: TButton
+    Left = 207
+    Top = 95
+    Width = 75
+    Height = 49
+    Caption = '?'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
   end
 end

@@ -18,6 +18,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,8 +32,13 @@ var
   foo: TPoint;
 
 implementation
-
+  uses Unit2;
 {$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Form2.ShowModal;
+end;
 
 procedure TForm1.cursorSet;   //Процедура установки курсора  (пока только для Серегиной версии)
 begin

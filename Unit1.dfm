@@ -2230,5 +2230,6 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    OnClick = Button1Click
   end
 end

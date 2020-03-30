@@ -51,21 +51,60 @@ begin
   Form2.ShowModal;
 end;
 
-procedure TForm1.cursorSet;   //Процедура установки курсора  (пока только для Серегиной версии)
+procedure TForm1.cursorSet;   //Процедура установки курсора
+var
+  EditsCheck1 : boolean;   //переменная состояния полей ввода
+  EditsCheck2 : boolean;   //переменная состояния полей ввода
+  EditsCheck3 : boolean;   //переменная состояния полей ввода
 begin
-  GetCursorPos(foo);
-  //Определяем текущий монитор курсора
-  if (foo.X > 0) then
+  //Проверяем, что все поля разрешений заполнены
+  EditsCheck1 := true;
+  EditsCheck2 := true;
+  EditsCheck3 := true;
+  if (Form1.Edit1.Text = '') then EditsCheck1 := false;
+  if (Form1.Edit2.Text = '') then EditsCheck1 := false;
+  if (Form1.Edit3.Text = '') then EditsCheck2 := false;
+  if (Form1.Edit4.Text = '') then EditsCheck2 := false;
+  if (Form1.Edit5.Text = '') then EditsCheck3 := false;
+  if (Form1.Edit6.Text = '') then EditsCheck3 := false;
+
+  //Работаем с курсорами
+  if Screen.MonitorCount = 1 then  //Если найден один монитор
     begin
-      SetCursorPos(-(1280 div 2)-1280, 1024 div 2);
+      if EditsCheck1 = false then ShowMessage('Необходимо заполнить разрешения мониторов!') else
+      SetCursorPos(Screen.Width div 2, Screen.Height div 2);
     end;
-  if (foo.X < 0) and (foo.X > -1280) then
+  if Screen.MonitorCount = 2 then //Если мониторов 2
     begin
-      SetCursorPos(1280 div 2, 1024 div 2);
+      if EditsCheck1 = false or EditsCheck2 = false then
+        ShowMessage('Необходимо заполнить разрешения мониторов!') else
+          begin
+            GetCursorPos(foo);
+            if (foo.X > 0) then
+            begin
+              SetCursorpos(-(StrToInt(Form1.Edit4.Text) div 2), StrToInt(Form1.Edit3.Text) div 2);
+            end else
+            begin
+              SetCursorpos(StrToInt(Form1.Edit6.Text) div 2, StrToInt(Form1.Edit5.Text) div 2);
+            end;
+          end;
     end;
-  if (foo.X < -1280) then
+  if Screen.MonitorCount = 3 then //Если мониторов 3
     begin
-      SetCursorPos(-(1280 div 2), 1024 div 2);
+      if EditsCheck1 = false or EditsCheck2 = false or EditsCheck3 = false then
+        ShowMessage('Необходимо заполнить разрешения мониторов!') else
+        begin
+          if (foo.X > 0) then
+            begin
+              SetCursorpos(-(StrToInt(Form1.Edit2.Text) div 2)-StrToInt(Form1.Edit4.Text), StrToInt(Form1.Edit1.Text) div 2);
+            end else if (foo.X < -StrToInt(Form1.Edit4.Text)) then
+            begin
+              SetCursorpos(-(StrToInt(Form1.Edit4.Text) div 2), StrToInt(Form1.Edit3.Text) div 2);
+            end else if foo.X > -StrToInt(Form1.Edit4.Text) then
+            begin
+              SetCursorPos(StrToInt(Form1.Edit2.Text) div 2, StrToInt(Form1.Edit1.Text) div 2);
+            end;
+        end;
     end;
 end;
 

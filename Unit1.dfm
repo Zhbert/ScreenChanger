@@ -5,7 +5,7 @@ object Form1: TForm1
   BorderStyle = bsSingle
   BorderWidth = 2
   Caption = 'Screen Changer'
-  ClientHeight = 169
+  ClientHeight = 291
   ClientWidth = 290
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -2176,7 +2176,7 @@ object Form1: TForm1
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 150
+    Top = 272
     Width = 290
     Height = 19
     Panels = <
@@ -2188,7 +2188,7 @@ object Form1: TForm1
         Text = #1052#1072#1082#1089#1080#1084#1091#1084': 3'
         Width = 100
       end>
-    ExplicitTop = 160
+    ExplicitTop = 150
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -2200,7 +2200,7 @@ object Form1: TForm1
     Font.Color = clWindowText
     Font.Height = -13
     Font.Name = 'Tahoma'
-    Font.Style = []
+    Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
     object StringGrid1: TStringGrid
@@ -2231,5 +2231,107 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 2
     OnClick = Button1Click
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Top = 147
+    Width = 274
+    Height = 118
+    Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1101#1082#1088#1072#1085#1086#1074
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    object Label4: TLabel
+      Left = 11
+      Top = 18
+      Width = 243
+      Height = 16
+      Caption = #1042#1074#1077#1076#1080#1090#1077' '#1088#1072#1079#1088#1077#1096#1077#1085#1080#1103' '#1089#1074#1086#1080#1093' '#1084#1086#1085#1080#1090#1086#1088#1086#1074' '#1074' '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 11
+      Top = 34
+      Width = 247
+      Height = 16
+      Caption = #1087#1086#1088#1103#1076#1082#1077' '#1080#1093' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1089#1083#1077#1074#1072'-'#1085#1072#1087#1088#1072#1074#1086
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 3
+      Top = 56
+      Width = 31
+      Height = 16
+      Caption = #1042#1099#1089':'
+    end
+    object Label7: TLabel
+      Left = 3
+      Top = 86
+      Width = 33
+      Height = 16
+      Caption = #1064#1080#1088':'
+    end
+    object Edit1: TEdit
+      Left = 37
+      Top = 56
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 0
+    end
+    object Edit2: TEdit
+      Left = 37
+      Top = 86
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 1
+    end
+    object Edit3: TEdit
+      Left = 117
+      Top = 56
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 2
+    end
+    object Edit4: TEdit
+      Left = 117
+      Top = 86
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 3
+    end
+    object Edit5: TEdit
+      Left = 197
+      Top = 56
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 4
+    end
+    object Edit6: TEdit
+      Left = 197
+      Top = 86
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 5
+    end
   end
 end

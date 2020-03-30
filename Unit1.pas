@@ -15,6 +15,17 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Button1: TButton;
+    GroupBox2: TGroupBox;
+    Label4: TLabel;
+    Label5: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    Label6: TLabel;
+    Label7: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);

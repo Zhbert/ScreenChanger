@@ -5,7 +5,7 @@ object Form1: TForm1
   BorderStyle = bsSingle
   BorderWidth = 2
   Caption = 'Screen Changer'
-  ClientHeight = 291
+  ClientHeight = 479
   ClientWidth = 290
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -2176,7 +2176,7 @@ object Form1: TForm1
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 272
+    Top = 460
     Width = 290
     Height = 19
     Panels = <
@@ -2188,7 +2188,7 @@ object Form1: TForm1
         Text = #1052#1072#1082#1089#1080#1084#1091#1084': 3'
         Width = 100
       end>
-    ExplicitTop = 150
+    ExplicitTop = 272
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -2236,7 +2236,7 @@ object Form1: TForm1
     Left = 8
     Top = 147
     Width = 274
-    Height = 118
+    Height = 254
     Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1101#1082#1088#1072#1085#1086#1074
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -2246,7 +2246,7 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 3
     object Label4: TLabel
-      Left = 11
+      Left = 3
       Top = 18
       Width = 243
       Height = 16
@@ -2259,11 +2259,11 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 11
+      Left = 3
       Top = 34
-      Width = 247
+      Width = 252
       Height = 16
-      Caption = #1087#1086#1088#1103#1076#1082#1077' '#1080#1093' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1089#1083#1077#1074#1072'-'#1085#1072#1087#1088#1072#1074#1086
+      Caption = #1087#1086#1088#1103#1076#1082#1077' '#1080#1093' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1089#1083#1077#1074#1072'-'#1085#1072#1087#1088#1072#1074#1086':'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -2285,7 +2285,33 @@ object Form1: TForm1
       Height = 16
       Caption = #1064#1080#1088':'
     end
-    object Edit1: TEdit
+    object Label8: TLabel
+      Left = 3
+      Top = 116
+      Width = 246
+      Height = 16
+      Caption = #1042#1074#1077#1076#1080#1090#1077' '#1092#1080#1079#1080#1095#1077#1089#1082#1080#1081' '#1087#1086#1088#1103#1076#1086#1082' '#1084#1086#1085#1080#1090#1086#1088#1086#1074':'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 3
+      Top = 168
+      Width = 224
+      Height = 16
+      Caption = #1059#1082#1072#1078#1080#1090#1077' '#1089#1077#1088#1077#1076#1080#1085#1091' '#1101#1082#1088#1072#1085#1072' '#1087#1086' '#1096#1080#1088#1080#1085#1077':'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object HeightEdit1: TEdit
       Left = 37
       Top = 56
       Width = 74
@@ -2293,7 +2319,7 @@ object Form1: TForm1
       NumbersOnly = True
       TabOrder = 0
     end
-    object Edit2: TEdit
+    object WidthEdit1: TEdit
       Left = 37
       Top = 86
       Width = 74
@@ -2301,7 +2327,7 @@ object Form1: TForm1
       NumbersOnly = True
       TabOrder = 1
     end
-    object Edit3: TEdit
+    object HeightEdit2: TEdit
       Left = 117
       Top = 56
       Width = 74
@@ -2309,7 +2335,7 @@ object Form1: TForm1
       NumbersOnly = True
       TabOrder = 2
     end
-    object Edit4: TEdit
+    object WidthEdit2: TEdit
       Left = 117
       Top = 86
       Width = 74
@@ -2317,7 +2343,7 @@ object Form1: TForm1
       NumbersOnly = True
       TabOrder = 3
     end
-    object Edit5: TEdit
+    object HeightEdit3: TEdit
       Left = 197
       Top = 56
       Width = 74
@@ -2325,13 +2351,91 @@ object Form1: TForm1
       NumbersOnly = True
       TabOrder = 4
     end
-    object Edit6: TEdit
+    object WidthEdit3: TEdit
       Left = 197
       Top = 86
       Width = 74
       Height = 24
       NumbersOnly = True
       TabOrder = 5
+    end
+    object ScreenCounter1: TEdit
+      Left = 3
+      Top = 138
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 6
+    end
+    object ScreenCounter2: TEdit
+      Left = 101
+      Top = 138
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 7
+    end
+    object ScreenCounter3: TEdit
+      Left = 197
+      Top = 138
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 8
+    end
+    object ScreenCenter1: TEdit
+      Left = 3
+      Top = 190
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 9
+    end
+    object ScreenCenter2: TEdit
+      Left = 101
+      Top = 190
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 10
+    end
+    object ScreenCenter3: TEdit
+      Left = 197
+      Top = 190
+      Width = 74
+      Height = 24
+      NumbersOnly = True
+      TabOrder = 11
+    end
+    object Button2: TButton
+      Left = 3
+      Top = 220
+      Width = 172
+      Height = 29
+      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1085#1072#1089#1090#1088#1086#1081#1082#1080
+      TabOrder = 12
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 8
+    Top = 402
+    Width = 274
+    Height = 55
+    Caption = #1058#1077#1089#1090#1080#1085#1075' '#1082#1086#1086#1088#1076#1080#1085#1072#1090
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    object visualizeCheckBox: TCheckBox
+      Left = 11
+      Top = 24
+      Width = 198
+      Height = 17
+      Caption = #1042#1080#1079#1091#1072#1083#1080#1079#1072#1094#1080#1103' '#1082#1086#1086#1088#1076#1080#1085#1072#1090
+      TabOrder = 0
     end
   end
 end

@@ -18,14 +18,25 @@ type
     GroupBox2: TGroupBox;
     Label4: TLabel;
     Label5: TLabel;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Edit5: TEdit;
-    Edit6: TEdit;
+    HeightEdit1: TEdit;
+    WidthEdit1: TEdit;
+    HeightEdit2: TEdit;
+    WidthEdit2: TEdit;
+    HeightEdit3: TEdit;
+    WidthEdit3: TEdit;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
+    ScreenCounter1: TEdit;
+    ScreenCounter2: TEdit;
+    ScreenCounter3: TEdit;
+    Label9: TLabel;
+    ScreenCenter1: TEdit;
+    ScreenCenter2: TEdit;
+    ScreenCenter3: TEdit;
+    Button2: TButton;
+    GroupBox3: TGroupBox;
+    visualizeCheckBox: TCheckBox;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
@@ -61,51 +72,28 @@ begin
   EditsCheck1 := true;
   EditsCheck2 := true;
   EditsCheck3 := true;
-  if (Form1.Edit1.Text = '') then EditsCheck1 := false;
-  if (Form1.Edit2.Text = '') then EditsCheck1 := false;
-  if (Form1.Edit3.Text = '') then EditsCheck2 := false;
-  if (Form1.Edit4.Text = '') then EditsCheck2 := false;
-  if (Form1.Edit5.Text = '') then EditsCheck3 := false;
-  if (Form1.Edit6.Text = '') then EditsCheck3 := false;
+  if Form1.HeightEdit1.Text = '' then EditsCheck1 := false;
+  if Form1.WidthEdit1.Text = '' then EditsCheck1 := false;
+  if Form1.ScreenCounter1.Text = '' then EditsCheck1 := false;
+  if Form1.ScreenCenter1.Text = '' then EditsCheck1 := false;
+
+  if Form1.HeightEdit2.Text = '' then EditsCheck2 := false;
+  if Form1.WidthEdit2.Text = '' then EditsCheck2 := false;
+  if Form1.ScreenCounter2.Text = '' then EditsCheck2 := false;
+  if Form1.ScreenCenter2.Text = '' then EditsCheck2 := false;
+
+  if Form1.HeightEdit3.Text = '' then EditsCheck3 := false;
+  if Form1.WidthEdit3.Text = '' then EditsCheck3 := false;
+  if Form1.ScreenCounter3.Text = '' then EditsCheck3 := false;
+  if Form1.ScreenCenter3.Text = '' then EditsCheck3 := false;
+
 
   //Работаем с курсорами
-  if Screen.MonitorCount = 1 then  //Если найден один монитор
+  if Screen.MonitorCount = 1 then
     begin
-      if EditsCheck1 = false then ShowMessage('Необходимо заполнить разрешения мониторов!') else
-      SetCursorPos(Screen.Width div 2, Screen.Height div 2);
+      SetCursorPos(Screen.Monitors[0].Width div 2, Screen.Monitors[0].Height div 2);
     end;
-  if Screen.MonitorCount = 2 then //Если мониторов 2
-    begin
-      if EditsCheck1 = false or EditsCheck2 = false then
-        ShowMessage('Необходимо заполнить разрешения мониторов!') else
-          begin
-            GetCursorPos(foo);
-            if (foo.X > 0) then
-            begin
-              SetCursorpos(-(StrToInt(Form1.Edit4.Text) div 2), StrToInt(Form1.Edit3.Text) div 2);
-            end else
-            begin
-              SetCursorpos(StrToInt(Form1.Edit6.Text) div 2, StrToInt(Form1.Edit5.Text) div 2);
-            end;
-          end;
-    end;
-  if Screen.MonitorCount = 3 then //Если мониторов 3
-    begin
-      if EditsCheck1 = false or EditsCheck2 = false or EditsCheck3 = false then
-        ShowMessage('Необходимо заполнить разрешения мониторов!') else
-        begin
-          if (foo.X > 0) then
-            begin
-              SetCursorpos(-(StrToInt(Form1.Edit2.Text) div 2)-StrToInt(Form1.Edit4.Text), StrToInt(Form1.Edit1.Text) div 2);
-            end else if (foo.X < -StrToInt(Form1.Edit4.Text)) then
-            begin
-              SetCursorpos(-(StrToInt(Form1.Edit4.Text) div 2), StrToInt(Form1.Edit3.Text) div 2);
-            end else if foo.X > -StrToInt(Form1.Edit4.Text) then
-            begin
-              SetCursorPos(StrToInt(Form1.Edit2.Text) div 2, StrToInt(Form1.Edit1.Text) div 2);
-            end;
-        end;
-    end;
+
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -172,7 +160,15 @@ end;
 procedure TForm1.hot_key(var Message: TMessage);
 begin
   //Обработчик нажатия хоткея
-  cursorSet;
+  //Если стоит галка: показываем координаты по хоткею
+  if Form1.visualizeCheckBox.Checked = true then
+    begin
+      GetCursorPos(foo);
+      ShowMessage('Текущие координаты: ' + IntToStr(foo.X) + ' x ' + IntToStr(foo.Y));
+    end else //Если нет - чекаем курсор
+    begin
+        cursorSet;
+    end;
 end;
 
 end.

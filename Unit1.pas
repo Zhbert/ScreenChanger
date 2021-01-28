@@ -87,9 +87,6 @@ end;
 
 procedure TForm1.cursorSet;   //Процедура установки курсора
 var
-  EditsCheck1 : boolean;   //переменная состояния полей ввода
-  EditsCheck2 : boolean;   //переменная состояния полей ввода
-  EditsCheck3 : boolean;   //переменная состояния полей ввода
   //Границы полей положений курсора
   FirstFieldMin : Integer;
   FirstFieldMax : Integer;
@@ -318,10 +315,6 @@ begin
      sIniFile.Free;
    end else showmessage('Файл config.ini не найден!');
 end;
-
-
-
-
 
 procedure TForm1.FormShow(Sender: TObject);
 begin

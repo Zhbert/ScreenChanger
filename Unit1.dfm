@@ -4,7 +4,7 @@ object Form1: TForm1
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   BorderWidth = 2
-  Caption = 'Screen Changer'
+  Caption = 'Screen Changer v.2'
   ClientHeight = 479
   ClientWidth = 290
   Color = clBtnFace

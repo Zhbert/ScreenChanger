@@ -4,7 +4,7 @@ object Form2: TForm2
   Top = 0
   BorderIcons = []
   BorderStyle = bsSingle
-  Caption = 'HelpForm'
+  Caption = #1057#1087#1088#1072#1074#1082#1072
   ClientHeight = 224
   ClientWidth = 272
   Color = clBtnFace
@@ -18,11 +18,11 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 67
+    Left = 59
     Top = 8
-    Width = 128
+    Width = 157
     Height = 19
-    Caption = 'Screen Changer'
+    Caption = 'Screen Changer v.2'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -16

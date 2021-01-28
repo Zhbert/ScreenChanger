@@ -2188,7 +2188,6 @@ object Form1: TForm1
         Text = #1052#1072#1082#1089#1080#1084#1091#1084': 3'
         Width = 100
       end>
-    ExplicitTop = 272
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -2285,25 +2284,12 @@ object Form1: TForm1
       Height = 16
       Caption = #1064#1080#1088':'
     end
-    object Label8: TLabel
-      Left = 3
-      Top = 116
-      Width = 246
-      Height = 16
-      Caption = #1042#1074#1077#1076#1080#1090#1077' '#1092#1080#1079#1080#1095#1077#1089#1082#1080#1081' '#1087#1086#1088#1103#1076#1086#1082' '#1084#1086#1085#1080#1090#1086#1088#1086#1074':'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
-    end
     object Label9: TLabel
       Left = 3
       Top = 168
-      Width = 224
+      Width = 275
       Height = 16
-      Caption = #1059#1082#1072#1078#1080#1090#1077' '#1089#1077#1088#1077#1076#1080#1085#1091' '#1101#1082#1088#1072#1085#1072' '#1087#1086' '#1096#1080#1088#1080#1085#1077':'
+      Caption = #1059#1082#1072#1078#1080#1090#1077' '#1089#1077#1088#1077#1076#1080#1085#1091' '#1101#1082#1088#1072#1085#1086#1074' '#1101#1082#1088#1072#1085#1072' '#1087#1086' '#1096#1080#1088#1080#1085#1077':'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -2318,6 +2304,7 @@ object Form1: TForm1
       Height = 24
       NumbersOnly = True
       TabOrder = 0
+      Text = '0'
     end
     object WidthEdit1: TEdit
       Left = 37
@@ -2326,6 +2313,7 @@ object Form1: TForm1
       Height = 24
       NumbersOnly = True
       TabOrder = 1
+      Text = '0'
     end
     object HeightEdit2: TEdit
       Left = 117
@@ -2334,6 +2322,7 @@ object Form1: TForm1
       Height = 24
       NumbersOnly = True
       TabOrder = 2
+      Text = '0'
     end
     object WidthEdit2: TEdit
       Left = 117
@@ -2342,6 +2331,7 @@ object Form1: TForm1
       Height = 24
       NumbersOnly = True
       TabOrder = 3
+      Text = '0'
     end
     object HeightEdit3: TEdit
       Left = 197
@@ -2350,6 +2340,7 @@ object Form1: TForm1
       Height = 24
       NumbersOnly = True
       TabOrder = 4
+      Text = '0'
     end
     object WidthEdit3: TEdit
       Left = 197
@@ -2358,62 +2349,69 @@ object Form1: TForm1
       Height = 24
       NumbersOnly = True
       TabOrder = 5
-    end
-    object ScreenCounter1: TEdit
-      Left = 3
-      Top = 138
-      Width = 74
-      Height = 24
-      NumbersOnly = True
-      TabOrder = 6
-    end
-    object ScreenCounter2: TEdit
-      Left = 101
-      Top = 138
-      Width = 74
-      Height = 24
-      NumbersOnly = True
-      TabOrder = 7
-    end
-    object ScreenCounter3: TEdit
-      Left = 197
-      Top = 138
-      Width = 74
-      Height = 24
-      NumbersOnly = True
-      TabOrder = 8
+      Text = '0'
     end
     object ScreenCenter1: TEdit
       Left = 3
       Top = 190
       Width = 74
       Height = 24
-      NumbersOnly = True
-      TabOrder = 9
+      TabOrder = 6
+      Text = '0'
     end
     object ScreenCenter2: TEdit
       Left = 101
       Top = 190
       Width = 74
       Height = 24
-      NumbersOnly = True
-      TabOrder = 10
+      TabOrder = 7
+      Text = '0'
     end
     object ScreenCenter3: TEdit
       Left = 197
       Top = 190
       Width = 74
       Height = 24
-      NumbersOnly = True
-      TabOrder = 11
+      TabOrder = 8
+      Text = '0'
     end
     object Button2: TButton
       Left = 3
       Top = 220
-      Width = 172
+      Width = 268
       Height = 29
-      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1085#1072#1089#1090#1088#1086#1081#1082#1080
+      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1085#1072#1089#1090#1088#1086#1081#1082#1080' '#1074' '#1092#1072#1081#1083
+      TabOrder = 9
+      OnClick = Button2Click
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 3
+      Top = 116
+      Width = 270
+      Height = 46
+      Caption = #1043#1088#1072#1085#1080#1094#1072' '#1087#1077#1088#1077#1093#1086#1076#1072
+      TabOrder = 10
+    end
+    object BorderCheck1: TRadioButton
+      Left = 37
+      Top = 136
+      Width = 33
+      Height = 17
+      TabOrder = 11
+    end
+    object BorderCheck2: TRadioButton
+      Left = 117
+      Top = 136
+      Width = 33
+      Height = 17
       TabOrder = 12
+    end
+    object BorderCheck3: TRadioButton
+      Left = 197
+      Top = 136
+      Width = 33
+      Height = 17
+      TabOrder = 13
     end
   end
   object GroupBox3: TGroupBox
